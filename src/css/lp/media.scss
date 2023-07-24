@@ -433,7 +433,8 @@
 
     header {
         height: auto;
-        top: 10px;
+        position: sticky;
+        // top: 10px;
     }
 
     header .container {
@@ -462,7 +463,8 @@
     }
 
     header .top_phone {
-        display: none;
+        // display: none;
+        margin-top: 16px;
     }
 
     header .top_dealer {
@@ -491,8 +493,8 @@
     }
 
     header .button.black {
-        padding: 18px 10px;
-        width: 100%;
+        padding: 18px 30px;
+        // width: 100%;
         margin-top: 20px;
         margin-bottom: 10px;
     }

@@ -71,20 +71,54 @@
 </header>
 
 
-<div class="b1">
-    <div class="container">
-        <div class="rows">
-            <div class="title1">
-                <font>200&nbsp;000&nbsp;₽ на&nbsp;KAIYI . АКЦИЯ ДО&nbsp;31.07.</font> <br>
-                <span>Оставьте заявку. Автомобили в&nbsp;наличии</span>
+<section class="banner relative pb-[56.25%] max-[400px]:pb-[70%]">
+    <div class="absolute inset-0">
+        <div class="swiper banner-slider h-full text-white">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide banner-slide" data-swiper-autoplay="4000">
+                    <div class="absolute inset-0 bg-black-50 z-1"></div>
+                    <div class="container h-full relative z-2">
+                        <div class="h-full flex flex-col justify-center">
+                            <h2 class="banner-title" data-swiper-parallax="-20%">Новые автомобили по цене заводов изготовителей!</h2>
+                        <p
+                            data-swiper-parallax="-60%"
+                            class="banner-subtitle"
+                        >
+                            Уже доступны для бронирования в Автохолдинге!
+                        </p>
+                        <div data-swiper-parallax="-55%">
+                            <a class="popup button white" href="#form_popup" data-title="Узнать подробнее" data-comment=""
+                            data-form_name="callback" data-form_type_model_name="" data-form_diler="">
+                                Узнать подробнее
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                    <img
+                        data-src="img/banner.webp"
+                        class="absolute inset-0 h-full object-cover object-center"
+                        alt="ALT"
+                        loading="lazy"
+                    />
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
             </div>
-            <a class="popup button white" href="#form_popup" data-title="Узнать подробнее" data-comment=""
-               data-form_name="callback" data-form_type_model_name="" data-form_diler="">
-                Узнать подробнее
-            </a>
+
+            <div class="swiper-pagination banner-pagination"></div>
+
+            <div class="autoplay-progress">
+                <svg viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20"></circle>
+                </svg>
+                <span></span>
+            </div>
+
+            <div class="swiper-button-prev banner-button-prev !hidden md:!flex"></div>
+            <div class="swiper-button-next banner-button-next !hidden md:!flex"></div>
+
         </div>
     </div>
-</div>
+</section>
 
 <div class="car">
     <div class="container e5">
