@@ -12,7 +12,9 @@ let autoplay = {
 let videoPrev = null;
 let videoActive = null;
 
-progressCircle.closest(".autoplay-progress").style.display = "none";
+if(progressCircle){
+	progressCircle.closest(".autoplay-progress").style.display = "none";
+}
 
 const initSlider = () => {
 	bannerSlider = new Swiper(".banner-slider", {

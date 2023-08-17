@@ -1,0 +1,20 @@
+@mixin font($fname, $fstyle, $fweight, $furl) {
+	@font-face {
+		src: url($furl) format("woff2");
+		font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		font-display: "swap";
+	}
+}
+
+@include font("Roboto", normal, 300, "/assets/fonts/Roboto-Light.woff2");
+@include font("Roboto", normal, 400, "/assets/fonts/Roboto-Regular.woff2");
+@include font("Roboto", normal, 500, "/assets/fonts/Roboto-Medium.woff2");
+@include font("Roboto", normal, 700, "/assets/fonts/Roboto-Bold.woff2");
+
+@layer base {
+	body {
+		@apply text-base relative;
+	}
+}
