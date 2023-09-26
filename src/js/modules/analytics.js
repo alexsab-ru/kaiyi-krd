@@ -1,5 +1,7 @@
 window.WebsiteAnalytics = (function() {
 
+	window.dataLayer = window.dataLayer || [];
+
 	function dataLayer(event, t = {}) {
 		void 0 !== window.dataLayer && window.dataLayer.push({
 			event: event,
@@ -38,31 +40,31 @@ window.WebsiteAnalytics = (function() {
 
 	function addPhoneGoals(item) {
 		item.addEventListener('click', function(evt) {
-			// dataLayer.push({'event': 'Phone', });
-			ymGoal('phone-click');
+			// ymGoal('phone-click');
+			dataLayer('phone-click');
 		});
 		item.addEventListener('copy', function(evt) {
-			// dataLayer.push({'event': 'Phone', });
-			ymGoal('phone-copy');
+			// ymGoal('phone-copy');
+			dataLayer('phone-copy');
 		});
 		item.addEventListener('contextmenu', function(evt) {
-			// dataLayer.push({'event': 'Phone', });
-			ymGoal('phone-contextmenu');
+			// ymGoal('phone-contextmenu');
+			dataLayer('phone-contextmenu');
 		});
 	}
 
 	function addEmailGoals(item) {
 		item.addEventListener('click', function(evt) {
-			// dataLayer.push({'event': 'Email', });
-			ymGoal('email-click');
+			// ymGoal('email-click');
+			dataLayer('email-click');
 		});
 		item.addEventListener('copy', function(evt) {
-			// dataLayer.push({'event': 'Email', });
-			ymGoal('email-copy');
+			// ymGoal('email-copy');
+			dataLayer('email-copy');
 		});
 		item.addEventListener('contextmenu', function(evt) {
-			// dataLayer.push({'event': 'Email', });
-			ymGoal('email-contextmenu');
+			// ymGoal('email-contextmenu');
+			dataLayer('email-contextmenu');
 		});
 	}
 
@@ -88,7 +90,7 @@ window.WebsiteAnalytics = (function() {
 		{
 			selector: 'form',
 			action: 'submit',
-			goal: 'form-sent',
+			goal: 'form-submit',
 			title: 'Отправили любую форму',
 		},
 
@@ -97,16 +99,17 @@ window.WebsiteAnalytics = (function() {
 	goals.forEach(function(value, index, array){
 		if(value.goal != null) {
 			document.querySelectorAll(value.selector).forEach(function(element) {
-				console.log("Set \"" + value.goal + "\" goal");
+				// console.log("Set \"" + value.goal + "\" goal");
 				element.addEventListener(value.action, function(){
-					ymGoal(value.goal);
+					// ymGoal(value.goal);
+					dataLayer(value.goal);
 				});
 			});
 		} else if(value.hit != null) {
 			document.querySelectorAll(value.selector).forEach(function(element) {
-				console.log("Set \"" + value.goal + "\" hit");
+				// console.log("Set \"" + value.goal + "\" hit");
 				element.addEventListener(value.action, function(){
-					ymPage(value.goal);
+					// ymPage(value.goal);
 					dataLayer.push({
 						event:"pageView",
 						eventAction: value.hit,
@@ -156,5 +159,5 @@ var formDataObj = window.WebsiteAnalytics.getFormDataObject(formData, form.id);
 window.WebsiteAnalytics.ymGoal("form-required");
 window.WebsiteAnalytics.ymGoal("form-submit");
 window.WebsiteAnalytics.ymGoal("form-error");
-window.WebsiteAnalytics.dataLayer("form_success", formDataObj);
+window.WebsiteAnalytics.dataLayer("form-success", formDataObj);
 */
