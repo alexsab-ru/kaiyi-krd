@@ -16,7 +16,7 @@ if (cookiecook != "no") {
         cookiewin.classList.add("hidden");
 
         let date = new Date;
-        date.setDate(date.getDate() + 1);
+        date.setDate(date.getDate() + 90);
         document.cookie = "cookiecook=no; path=/; expires=" + date.toUTCString();
     });
 }
